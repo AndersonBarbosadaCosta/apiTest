@@ -44,7 +44,6 @@ public class RestApiTest {
 	public void naoDeveAdicinarTarefaInvalida() {
 		RestAssured
 		.given()
-		.log().all()
 		.body("{\"task\":\"nova descrição\", \"dueDate\":\"2010-10-10\"}")
 		.contentType(ContentType.JSON)
 		.when()
